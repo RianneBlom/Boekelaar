@@ -1,0 +1,97 @@
+<nav>
+  <div class="logo">
+    <a href="#">Boekelaar coaching</a>
+  </div>
+  <svg
+    fill="var(--primary-color, green)"
+    class="hamburger-menu"
+    viewBox="0 0 100 100"
+    width="50"
+  >
+    <rect class="line top" width="80" height="5" x="10" y="25" rx="5"></rect>
+    <rect class="line middle" width="80" height="5" x="10" y="45" rx="5"></rect>
+    <rect class="line bottom" width="80" height="5" x="10" y="65" rx="5"></rect>
+  </svg>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Over mij</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+<style>
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f2f2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    height: 70px;
+    padding: 0 20px;
+  }
+
+  .logo a {
+    font-weight: bold;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links li {
+    margin: 0 10px;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .hamburger-menu {
+    display: none;
+  }
+
+  .bar {
+    width: 30px;
+    height: 4px;
+    margin: 5px 0;
+    background-color: #333;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+
+    .hamburger-menu {
+      display: block;
+      cursor: pointer;
+    }
+
+    .hamburger-menu.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger-menu.active .bar:nth-child(1) {
+      transform: translateY(10px) rotate(45deg);
+    }
+
+    .hamburger-menu.active .bar:nth-child(3) {
+      transform: translateY(-10px) rotate(-45deg);
+    }
+  }
+</style>

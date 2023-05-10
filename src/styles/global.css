@@ -1,0 +1,13 @@
+:root {
+  --primary-color: #5daa58;
+}
+
+* {
+  font-family: "Montserrat";
+  font-size: 22px;
+  color: #051e43;
+  margin: 0 0;
+}
+h1 {
+  color: 051e43;
+}
