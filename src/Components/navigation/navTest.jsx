@@ -35,7 +35,6 @@ export default function NavTest() {
           display: showMenu ? "block" : "none",
         }}
       >
-        {/* Temp button */}
         <svg
           onClick={() => {
             setShowMenu(false);
