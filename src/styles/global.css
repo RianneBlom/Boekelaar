@@ -22,36 +22,3 @@ h1 {
 a {
   text-decoration: none;
 }
-
-.AnimationIn {
-  animation-name: NavIn;
-  animation-duration: 0.5s;
-}
-
-.AnimationOut {
-  animation-name: NavOut;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes NavIn {
-  from {
-    right: -350px;
-    display: none;
-  }
-  to {
-    right: 0;
-    display: block;
-  }
-}
-
-@keyframes NavOut {
-  from {
-    right: 0;
-    display: block;
-  }
-  to {
-    right: -350px;
-    display: "none";
-  }
-}

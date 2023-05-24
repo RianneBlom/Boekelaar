@@ -25,21 +25,39 @@ export default function NavTest() {
         <rect width="80" height="5" x="10" y="65" rx="5"></rect>
       </svg>
       <div
-        className={showMenu ? "AnimationIn" : "AnimationOut"}
         style={{
           position: "absolute",
           right: 0,
           top: 0,
           height: "100vh",
           width: size.width < 400 ? "100vw" : 350,
-          backgroundColor: "red",
+          backgroundColor: "white",
+          display: showMenu ? "block" : "none",
         }}
       >
         {/* Temp button */}
-        <svg>
-          <rect width="40" height="5" x="10" y="25" rx="5" />
-          <rect width="40" height="5" x="10" y="45" rx="5" />
+        <svg
+          onClick={() => {
+            setShowMenu(false);
+          }}
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          style={{
+            width: 50,
+            height: 50,
+            cursor: "pointer",
+          }}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
         </svg>
+
         <ul
           style={{
             display: "flex",
