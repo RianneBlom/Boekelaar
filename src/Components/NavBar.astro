@@ -1,21 +1,13 @@
 ---
 // import Hamburger from '../components/hamburger.js'';
+import Hamburger from "./Hamburger.astro";
 ---
 
 <nav>
   <div class="logo">
     <a href="#">Boekelaar coaching</a>
   </div>
-  <svg
-    fill="var(--primary-color, green)"
-    class="hamburger-menu alert"
-    viewBox="0 0 100 100"
-    width="50"
-  >
-    <rect class="line top" width="80" height="5" x="10" y="25" rx="5"></rect>
-    <rect class="line middle" width="80" height="5" x="10" y="45" rx="5"></rect>
-    <rect class="line bottom" width="80" height="5" x="10" y="65" rx="5"></rect>
-  </svg>
+  <Hamburger />
   <ul class="nav-links">
     <li><a href="#">Home</a></li>
     <li><a href="#">Blog</a></li>
@@ -23,35 +15,6 @@
     <li><a href="#">Contact</a></li>
   </ul>
 </nav>
-<div class="nav-page2"></div>
-<!-- <script src="./hamburger.js"></script> -->
-<script>
-  const buttons = document.querySelectorAll("svg.alert");
-  const mainMenu = document.querySelector(".mainMenu");
-  const closeMenu = document.querySelector(".closeMenu");
-  const openMenu = document.querySelector(".openMenu");
-  const menu_items = document.querySelectorAll("nav .mainMenu li a");
-
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      show();
-    });
-  });
-
-  menu_items.forEach((item) => {
-    item.addEventListener("click", function () {
-      close();
-    });
-  });
-
-  function show() {
-    console.log("TEST SHOW");
-  }
-
-  function close() {
-    console.log("TEST close");
-  }
-</script>
 <style>
   nav {
     display: flex;
@@ -94,51 +57,10 @@
     text-transform: uppercase;
     letter-spacing: 0.2dvw;
   }
-  .hamburger-menu {
-    display: none;
-  }
-
-  .bar {
-    width: 30px;
-    height: 4px;
-    margin: 5px 0;
-    background-color: #333;
-  }
-  .nav-page2 {
-    position: fixed;
-    top: 0;
-    left: 60%;
-    background: whitesmoke;
-    width: 40%;
-    height: 70vh;
-    transition: 0.8s;
-    transform: translate(0, -100%);
-  }
-
-  .transform {
-    transform: translate(0, 0);
-  }
 
   @media (max-width: 840px) {
     .nav-links {
       display: none;
-    }
-
-    .hamburger-menu {
-      display: block;
-      cursor: pointer;
-    }
-
-    .hamburger-menu.active .bar:nth-child(2) {
-      opacity: 0;
-    }
-
-    .hamburger-menu.active .bar:nth-child(1) {
-      transform: translateY(10px) rotate(45deg);
-    }
-
-    .hamburger-menu.active .bar:nth-child(3) {
-      transform: translateY(-10px) rotate(-45deg);
     }
   }
 </style>
