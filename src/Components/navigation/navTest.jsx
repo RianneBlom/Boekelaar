@@ -30,8 +30,8 @@ export default function NavTest() {
           right: 0,
           top: 0,
           height: "100vh",
-          width: size.width < 400 ? "100vw" : 350,
-          backgroundColor: "white",
+          width: size.width < 960 ? "100vw" : 350,
+          backgroundColor: "#5DAA58",
           display: showMenu ? "block" : "none",
         }}
       >
@@ -62,6 +62,7 @@ export default function NavTest() {
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
+
             listStyle: "none",
             gap: 15,
           }}
@@ -77,9 +78,6 @@ export default function NavTest() {
           </li>
           <li>
             <a href="#">Contact</a>
-          </li>
-          <li>
-            <a href="#">test</a>
           </li>
         </ul>
       </div>
@@ -105,9 +103,6 @@ export default function NavTest() {
         </li>
         <li>
           <a href="#">Contact</a>
-        </li>
-        <li>
-          <a href="#">test</a>
         </li>
       </ul>
     </>
